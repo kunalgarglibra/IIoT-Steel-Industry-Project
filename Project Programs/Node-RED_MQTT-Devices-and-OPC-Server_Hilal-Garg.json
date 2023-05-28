@@ -1,0 +1,1283 @@
+[
+    {
+        "id": "4a0ab5d0965b14ce",
+        "type": "tab",
+        "label": "MQTT Client Simulator",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cf9752c308c85517",
+        "type": "tab",
+        "label": "OPC UA Server",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0d831bd9ba588536",
+        "type": "mqtt-sparkplug-broker",
+        "name": "Local Host",
+        "deviceGroup": "My Devices",
+        "eonName": "Node-Red",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "enableStoreForward": false,
+        "primaryScada": ""
+    },
+    {
+        "id": "ba592d0a85a2551b",
+        "type": "mqtt-sparkplug-broker",
+        "name": "",
+        "deviceGroup": "",
+        "eonName": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "enableStoreForward": false,
+        "primaryScada": ""
+    },
+    {
+        "id": "bab99c1197226b2c",
+        "type": "ui_tab",
+        "name": "Floor MQTT Devices",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5a3da19b2c0e7dcb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "981be07709881e5e",
+        "type": "ui_group",
+        "name": "Device 1",
+        "tab": "bab99c1197226b2c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "08f9dac9492a62fa",
+        "type": "tls-config",
+        "name": "AWS Certificates",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "certificate.pem.crt",
+        "keyname": "private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "037821c514793836",
+        "type": "mqtt-sparkplug-broker",
+        "name": "AWS IoT Core Broker",
+        "deviceGroup": "",
+        "eonName": "",
+        "broker": "a37rcff3po18yy-ats.iot.us-east-2.amazonaws.com",
+        "port": "8883",
+        "tls": "08f9dac9492a62fa",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "enableStoreForward": false,
+        "primaryScada": ""
+    },
+    {
+        "id": "a398dfec54d1c3f3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "a37rcff3po18yy-ats.iot.us-east-2.amazonaws.com",
+        "port": "8883",
+        "tls": "08f9dac9492a62fa",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9fff6d091ee8d3f4",
+        "type": "ui_group",
+        "name": "Device 2",
+        "tab": "bab99c1197226b2c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2bc2e58f9eb12045",
+        "type": "ui_spacer",
+        "z": "4a0ab5d0965b14ce",
+        "name": "spacer",
+        "group": "981be07709881e5e",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e3e4f7a91e696e84",
+        "type": "ui_spacer",
+        "z": "4a0ab5d0965b14ce",
+        "name": "spacer",
+        "group": "9fff6d091ee8d3f4",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "055756f253c0c100",
+        "type": "ui_spacer",
+        "z": "4a0ab5d0965b14ce",
+        "name": "spacer",
+        "group": "0c7dd4145996675a",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8ae405fa623478f5",
+        "type": "ui_spacer",
+        "z": "4a0ab5d0965b14ce",
+        "name": "spacer",
+        "group": "2a3a593e3a0f5906",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e1c792bd2c12f3c8",
+        "type": "ui_spacer",
+        "z": "4a0ab5d0965b14ce",
+        "name": "spacer",
+        "group": "f859467625ad5aa1",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4a20b4fa825b8f9e",
+        "type": "ui_group",
+        "name": "Device 3",
+        "tab": "bab99c1197226b2c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5de8c6e694e71459",
+        "type": "ui_spacer",
+        "z": "4a0ab5d0965b14ce",
+        "name": "spacer",
+        "group": "4a20b4fa825b8f9e",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "55018ef8f0d13b74",
+        "type": "mqtt sparkplug device",
+        "z": "4a0ab5d0965b14ce",
+        "name": "MQTT_Devices",
+        "metrics": {
+            "Device1/D1_AI1": {
+                "dataType": "Float"
+            },
+            "Device1/D1_DI1": {
+                "dataType": "Boolean"
+            },
+            "Device1/D1_DI2": {
+                "dataType": "Boolean"
+            },
+            "Device2/D2_AI1": {
+                "dataType": "Float"
+            },
+            "Device2/D2_DI1": {
+                "dataType": "Boolean"
+            },
+            "Device3/D3_AI1": {
+                "dataType": "Float"
+            },
+            "Device3/D3_AI2": {
+                "dataType": "Float"
+            }
+        },
+        "broker": "037821c514793836",
+        "x": 820,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d5b59355451dff6",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device1/D1_AI1\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "d90bcdb098e5eecf",
+        "type": "ui_slider",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "AI Sensor 1",
+        "tooltip": "",
+        "group": "981be07709881e5e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "1000",
+        "step": "1",
+        "className": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "0d5b59355451dff6"
+            ]
+        ]
+    },
+    {
+        "id": "5769273d561f2755",
+        "type": "ui_switch",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "DI Sensor 1",
+        "tooltip": "",
+        "group": "981be07709881e5e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "377e39cbbda25b61"
+            ]
+        ]
+    },
+    {
+        "id": "cb5b2467993ae157",
+        "type": "ui_switch",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "DI Sensor 2",
+        "tooltip": "",
+        "group": "981be07709881e5e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "24ecb93f1c4a68a7"
+            ]
+        ]
+    },
+    {
+        "id": "377e39cbbda25b61",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device1/D1_DI1\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "24ecb93f1c4a68a7",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device1/D1_DI2\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "7145c989c46872e6",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device3/D3_AI1\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "4b92f2a3b4344a23",
+        "type": "ui_slider",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "AI Sensor 1",
+        "tooltip": "%",
+        "group": "4a20b4fa825b8f9e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "0.5",
+        "className": "",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "7145c989c46872e6"
+            ]
+        ]
+    },
+    {
+        "id": "3972b2e9ef3bd936",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device3/D3_AI2\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 560,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "e0ff213630f5f86a",
+        "type": "ui_slider",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "AI Sensor 2",
+        "tooltip": "%",
+        "group": "4a20b4fa825b8f9e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "0.5",
+        "className": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "3972b2e9ef3bd936"
+            ]
+        ]
+    },
+    {
+        "id": "34cdeabb1de3ba8e",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device2/D2_AI1\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 320,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "67f7c92ee4e473ef",
+        "type": "ui_slider",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "AI Sensor 1",
+        "tooltip": "",
+        "group": "9fff6d091ee8d3f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "0.25",
+        "className": "",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "34cdeabb1de3ba8e"
+            ]
+        ]
+    },
+    {
+        "id": "1572d8ddc0d46d39",
+        "type": "ui_switch",
+        "z": "4a0ab5d0965b14ce",
+        "name": "",
+        "label": "DI Sensor 1",
+        "tooltip": "",
+        "group": "9fff6d091ee8d3f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "94d2e3fdce7ec8b3"
+            ]
+        ]
+    },
+    {
+        "id": "94d2e3fdce7ec8b3",
+        "type": "function",
+        "z": "4a0ab5d0965b14ce",
+        "name": "Library-based Function",
+        "func": "tagValue = msg.payload;\n\nmsg.payload = {\n    \"metrics\":[{\n        \"name\":\"Device2/D2_DI1\",\n        \"value\":tagValue\n    }]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 380,
+        "wires": [
+            [
+                "55018ef8f0d13b74"
+            ]
+        ]
+    },
+    {
+        "id": "e46f51b4e96d73cf",
+        "type": "OpcUa-Server",
+        "z": "cf9752c308c85517",
+        "port": "53880",
+        "name": "",
+        "endpoint": "",
+        "users": "users.json",
+        "nodesetDir": "",
+        "autoAcceptUnknownCertificate": true,
+        "registerToDiscovery": true,
+        "constructDefaultAddressSpace": true,
+        "allowAnonymous": true,
+        "endpointNone": true,
+        "endpointSign": false,
+        "endpointSignEncrypt": false,
+        "endpointBasic128Rsa15": false,
+        "endpointBasic256": false,
+        "endpointBasic256Sha256": false,
+        "maxNodesPerBrowse": "100",
+        "maxNodesPerHistoryReadData": "100",
+        "maxNodesPerHistoryReadEvents": "100",
+        "maxNodesPerHistoryUpdateData": "100",
+        "maxNodesPerRead": "100",
+        "maxNodesPerWrite": "100",
+        "maxNodesPerMethodCall": "100",
+        "maxNodesPerRegisterNodes": "100",
+        "maxNodesPerNodeManagement": "100",
+        "maxMonitoredItemsPerCall": "100",
+        "maxNodesPerHistoryUpdateEvents": "100",
+        "maxNodesPerTranslateBrowsePathsToNodeIds": "100",
+        "x": 640,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2616c3d8238f197f",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Folder: Controls",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Controls",
+        "payload": "{\"opcuaCommand\": \"addFolder\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "5798a41c849fbd09",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: LED",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=LED;datatype=Boolean",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "5e52829d602ea703",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Motor",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Motor;datatype=Boolean",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "04316f636be0f971",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Folder: Sensors",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Sensors",
+        "payload": "{\"opcuaCommand\": \"addFolder\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "aeab419cba6acc66",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Folder: Operator_Controls",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Operator_Controls",
+        "payload": "{\"opcuaCommand\": \"addFolder\"}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "99d2b0ae636e9a3d",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Set to Main Folder",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=OPC-UA_Data",
+        "payload": "{\"opcuaCommand\": \"setFolder\"}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 40,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "275e3b45f9ac27c1",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Main Folder",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=OPC-UA_Data",
+        "payload": "{\"opcuaCommand\": \"addFolder\"}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "a5932ecf3db54fcd",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Distance",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Distance;datatype=Float",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 480,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "efb5deabaafd1208",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Temperature",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Temperature;datatype=Float",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 520,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "ac497ae0ac13bde9",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Humidity",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Humidity;datatype=Float",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "97f3316aaabd7c3f",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Push_Button",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Push_Button;datatype=Boolean",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "b17753f9f85c1f6f",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Text_Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Text_Input;datatype=String",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 680,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "a8c94663b03b59c4",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Selection1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Selection1;datatype=Int32",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "11a754f9f46912cf",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Selection2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Selection2;datatype=String",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 760,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "b1b7a5626a814b52",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: LED_SCADA",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=LED_SCADA;datatype=Boolean",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 840,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "718699daa9f0e49c",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Motor_SCADA",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Motor_SCADA;datatype=Boolean",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 880,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "f53d67e3eec90f82",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: Status_SCADA",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Status_SCADA;datatype=String",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 920,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "5883da330d853965",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Folder: SCADA_Controls",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=SCADA_Controls",
+        "payload": "{\"opcuaCommand\": \"addFolder\"}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    },
+    {
+        "id": "4f863413071c69dd",
+        "type": "comment",
+        "z": "cf9752c308c85517",
+        "name": "",
+        "info": "Order of triggers:\n - Set to Main Folder\n - Add Main Folder\n - Add Folder: Controls\n - Add Variable: LED\n - Add Variable: Motor\n - Set to Main Folder\n - Add Folder: Sensors\n - Add Variable: Distance\n - Add Variable: Temperature\n - Add Variable: Humidity\n - Set to Main Folder\n - Add Folder: Operator_Controls\n - Add Variable: Push_Button\n - Add Variable: Text_Input\n - Add Variable: Selection1\n - Add Variable: Selection2\n - Set to Main Folder\n - Add Folder: SCADA_Controls\n - Add Variable: LED_SCADA\n - Add Variable: Motor_SCADA\n - Add Variable: Status_SCADA",
+        "x": 600,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7d54d0cc66215609",
+        "type": "inject",
+        "z": "cf9752c308c85517",
+        "name": "Add Variable: SliderValue_SCADA",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=SliderValue_SCADA;datatype=Float",
+        "payload": "{\"opcuaCommand\": \"addVariable\"}",
+        "payloadType": "json",
+        "x": 240,
+        "y": 960,
+        "wires": [
+            [
+                "e46f51b4e96d73cf"
+            ]
+        ]
+    }
+]
